@@ -1,6 +1,201 @@
-id_number,average_corrosion_rate,thickness_mm,last_inspection_date,next_inspection_date,commodity,feature_type,cml_shape,elimination_flag
-CML-001,0.12,8.4,2021-01-15,2026-01-15,Crude Oil,Elbow,External,0
-CML-002,0.25,7.9,2020-06-10,2024-06-10,Potable Water,Straight,Internal,1
-CML-003,0.05,9.2,2022-03-01,2027-03-01,Refined Product,Reducer,External,0
-CML-004,0.4,6.8,2019-11-20,2023-11-20,Gas,Nozzle,Internal,1
-CML-005,0.18,7.5,2021-08-05,2025-08-05,Potable Water,Straight,External,0
+id_number,average_corrosion_rate,thickness_mm,commodity,feature_type,cml_shape,last_inspection_date,next_inspection_date,remaining_life_years,days_to_next_inspection,risk_score,elimination_flag
+CML-001,0.07,11.7,Natural Gas,Pipe,Both,2023-05-21,2028-01-25,50.0,781,0,1
+CML-002,0.12,9.4,Natural Gas,Weld,Internal,2021-08-13,2025-10-18,50.0,0,18,0
+CML-003,0.05,6.5,Condensate,Weld,Both,2024-10-11,2030-05-07,50.0,1614,49,0
+CML-004,0.04,11.1,Gas,Header,Internal,2022-05-30,2028-01-22,50.0,778,4,1
+CML-005,0.2,10.1,Crude Oil,Tee,Both,2022-07-23,2026-07-05,35.5,212,19,0
+CML-006,0.07,9.2,Natural Gas,Pipe,External,2023-08-27,2029-02-27,50.0,815,15,0
+CML-007,0.11,10.2,Potable Water,Flange,External,2024-11-09,2029-06-12,50.0,1650,12,0
+CML-008,0.22,10.6,Process Water,Tee,External,2023-01-18,2027-01-31,34.5,393,25,0
+CML-009,0.23,7.1,Process Water,Reducer,Internal,2024-11-03,2028-12-18,17.8,1475,36,0
+CML-010,0.13,7.8,Fuel Gas,Nozzle,External,2022-03-20,2028-01-14,36.9,771,29,0
+CML-011,0.13,7.4,Refined Product,Tee,External,2021-10-16,2027-03-22,33.8,1203,31,0
+CML-012,0.11,10.8,Gas,Reducer,Internal,2023-09-18,2029-02-09,50.0,797,11,0
+CML-013,0.06,7.1,Natural Gas,Flange,Both,2023-05-14,2029-03-08,50.0,1189,31,0
+CML-014,0.03,10.3,Fuel Gas,Header,Internal,2024-02-26,2030-01-06,50.0,1858,3,1
+CML-015,0.15,8.8,Crude Oil,Reducer,Both,2023-01-02,2026-12-16,38.7,377,25,0
+CML-016,0.13,6.3,Steam,Pipe,Both,2023-01-01,2027-09-24,25.4,1389,38,0
+CML-017,0.28,8.8,Process Water,Reducer,External,2022-09-14,2026-09-27,20.7,297,41,0
+CML-018,0.1,7.5,Refined Product,Flange,Both,2021-08-13,2026-11-17,45.0,1444,28,0
+CML-019,0.09,7.2,Refined Product,Reducer,Both,2024-05-18,2030-02-09,46.7,1893,26,0
+CML-020,0.08,10.0,Potable Water,Reducer,Internal,2021-08-31,2026-08-13,50.0,617,15,0
+CML-021,0.06,8.5,Potable Water,Flange,External,2023-09-04,2028-04-28,50.0,1606,20,0
+CML-022,0.04,8.0,Condensate,Flange,Both,2024-01-02,2029-08-27,50.0,1726,26,1
+CML-023,0.14,8.9,Crude Oil,Flange,Internal,2024-10-26,2028-11-09,42.1,1436,26,0
+CML-024,0.04,11.4,Potable Water,Reducer,Internal,2021-09-25,2027-05-18,50.0,1260,1,1
+CML-025,0.06,8.4,Fuel Gas,Nozzle,Both,2023-12-29,2029-07-22,50.0,1691,20,0
+CML-026,0.12,9.6,Crude Oil,Elbow,Both,2024-04-21,2028-05-04,50.0,1247,16,0
+CML-027,0.08,9.0,Potable Water,Bend,Both,2022-01-13,2027-08-08,50.0,1342,18,0
+CML-028,0.1,10.9,Natural Gas,Elbow,Both,2024-11-08,2030-06-01,50.0,1675,7,0
+CML-029,0.14,10.6,Gas,Elbow,Both,2021-06-17,2025-07-02,50.0,209,15,0
+CML-030,0.13,10.3,Fuel Gas,Header,External,2024-07-03,2030-02-24,56.2,1908,13,0
+CML-031,0.13,7.1,Refined Product,Pipe,Internal,2024-03-09,2029-11-03,31.5,1795,31,0
+CML-032,0.09,8.9,Condensate,Nozzle,External,2024-04-03,2029-11-26,65.6,1818,19,0
+CML-033,0.13,11.1,Condensate,Reducer,Internal,2023-04-02,2028-11-26,50.0,1453,7,0
+CML-034,0.11,6.9,Fuel Gas,Header,Internal,2024-03-11,2029-11-05,35.5,1797,30,0
+CML-035,0.08,11.0,Condensate,Reducer,External,2024-09-25,2030-05-19,50.0,1627,9,0
+CML-036,0.09,10.1,Potable Water,Tee,Both,2024-02-27,2030-02-09,78.9,1893,14,0
+CML-037,0.05,11.7,Refined Product,Nozzle,External,2023-11-04,2029-05-29,50.0,1637,2,1
+CML-038,0.11,8.9,Gas,Reducer,Internal,2022-11-01,2028-06-24,53.6,1298,22,0
+CML-039,0.09,8.6,Crude Oil,Reducer,Internal,2023-01-17,2028-09-10,62.2,1375,21,0
+CML-040,0.06,7.0,Fuel Gas,Weld,Both,2024-05-29,2030-01-21,66.7,1874,27,0
+CML-041,0.13,9.5,Condensate,Tee,Both,2024-11-06,2030-05-31,50.0,1669,17,0
+CML-042,0.19,7.7,Steam,Flange,External,2023-07-15,2027-08-29,24.7,1363,33,0
+CML-043,0.29,9.0,Steam,Reducer,Internal,2023-11-27,2027-11-09,20.7,1436,34,0
+CML-044,0.04,10.2,Fuel Gas,Reducer,Both,2022-07-18,2028-03-12,50.0,1193,8,1
+CML-045,0.13,9.6,Natural Gas,Weld,Both,2023-08-30,2029-02-22,50.0,811,16,0
+CML-046,0.05,8.1,Condensate,Reducer,Both,2023-03-30,2028-11-23,50.0,1450,22,0
+CML-047,0.15,7.5,Condensate,Nozzle,Both,2024-07-22,2029-02-16,30.0,1700,33,0
+CML-048,0.11,11.8,Gas,Tee,Internal,2021-08-09,2026-07-26,50.0,599,3,0
+CML-049,0.04,5.5,Crude Oil,Tee,External,2023-05-25,2029-01-17,62.5,1675,44,1
+CML-050,0.14,10.0,Potable Water,Reducer,Both,2024-08-24,2030-04-18,50.0,1626,17,0
+CML-051,0.08,11.3,Refined Product,Reducer,External,2024-01-12,2029-09-06,50.0,1737,9,0
+CML-052,0.09,5.7,Natural Gas,Weld,External,2021-12-30,2027-06-23,30.0,1296,47,0
+CML-053,0.1,9.6,Natural Gas,Reducer,Internal,2021-10-22,2027-04-28,66.0,1240,18,0
+CML-054,0.1,6.3,Condensate,Tee,Both,2023-05-21,2029-01-12,33.0,1670,35,0
+CML-055,0.09,11.9,Crude Oil,Nozzle,Both,2023-09-11,2029-03-05,98.9,1187,3,0
+CML-056,0.12,8.8,Fuel Gas,Weld,Both,2024-01-23,2029-09-17,48.3,1748,23,0
+CML-057,0.07,7.0,Fuel Gas,Reducer,Internal,2024-07-31,2030-03-25,57.1,1737,26,0
+CML-058,0.04,7.8,Gas,Reducer,Both,2022-02-16,2027-10-10,50.0,1405,22,1
+CML-059,0.14,7.7,Refined Product,Reducer,Internal,2022-02-09,2027-09-26,33.6,1391,32,0
+CML-060,0.09,7.3,Refined Product,Weld,Internal,2021-11-30,2027-05-24,47.8,1266,27,0
+CML-061,0.05,6.4,Crude Oil,Tee,Both,2024-11-06,2030-05-31,68.0,1669,32,0
+CML-062,0.13,11.4,Gas,Tee,Internal,2024-04-08,2030-00-02,50.0,1824,7,0
+CML-063,0.14,11.8,Refined Product,Reducer,External,2022-04-04,2027-11-28,50.0,1424,6,0
+CML-064,0.11,10.0,Condensate,Reducer,External,2023-11-21,2029-05-16,63.6,1624,13,0
+CML-065,0.14,11.8,Crude Oil,Reducer,Both,2023-09-24,2028-10-07,50.0,1403,6,0
+CML-066,0.03,6.4,Refined Product,Tee,Internal,2024-05-15,2030-01-08,50.0,1861,26,1
+CML-067,0.26,8.8,Crude Oil,Reducer,Both,2024-03-16,2028-04-29,22.3,1242,31,0
+CML-068,0.08,9.7,Potable Water,Reducer,Internal,2023-02-05,2028-09-28,83.8,1393,15,0
+CML-069,0.11,10.9,Refined Product,Pipe,Both,2024-10-13,2030-05-07,50.0,1615,10,0
+CML-070,0.08,6.8,Natural Gas,Reducer,Both,2022-01-28,2027-09-23,47.5,1388,28,0
+CML-071,0.1,11.0,Fuel Gas,Nozzle,External,2024-08-04,2030-03-28,50.0,1710,9,0
+CML-072,0.13,8.2,Crude Oil,Pipe,Both,2023-01-21,2028-10-04,40.0,1400,27,0
+CML-073,0.05,10.6,Condensate,Weld,External,2023-05-04,2028-12-27,50.0,1484,9,1
+CML-074,0.12,9.3,Crude Oil,Reducer,External,2024-07-19,2029-02-13,52.5,1697,19,0
+CML-075,0.06,10.6,Gas,Bend,Internal,2021-07-23,2026-07-06,50.0,579,9,0
+CML-076,0.13,8.6,Crude Oil,Reducer,Both,2024-06-26,2029-01-20,43.1,1673,24,0
+CML-077,0.12,9.0,Potable Water,Reducer,Both,2022-12-17,2028-08-10,50.0,1344,20,0
+CML-078,0.04,11.8,Potable Water,Reducer,Both,2021-11-21,2027-05-15,50.0,1257,1,1
+CML-079,0.12,9.4,Crude Oil,Reducer,Both,2024-02-18,2029-10-12,53.3,1773,18,0
+CML-080,0.11,7.5,Fuel Gas,Nozzle,Both,2024-04-25,2030-00-19,40.9,1841,27,0
+CML-081,0.09,11.8,Refined Product,Reducer,External,2024-01-04,2029-08-29,97.8,1729,5,0
+CML-082,0.13,7.4,Steam,Pipe,Internal,2024-10-07,2030-05-01,33.8,1609,31,0
+CML-083,0.14,7.1,Refined Product,Weld,External,2024-06-15,2029-01-09,29.3,1662,35,0
+CML-084,0.11,11.1,Fuel Gas,Pipe,Internal,2021-08-05,2026-07-22,50.0,595,6,0
+CML-085,0.11,9.2,Crude Oil,Tee,External,2024-04-11,2030-00-05,56.4,1827,19,0
+CML-086,0.08,6.2,Gas,Reducer,External,2024-09-06,2030-04-30,40.0,1608,35,0
+CML-087,0.05,11.1,Condensate,Nozzle,Both,2024-10-31,2030-06-24,50.0,1693,5,1
+CML-088,0.12,7.0,Potable Water,Tee,External,2021-08-18,2026-08-01,33.3,609,34,0
+CML-089,0.07,10.5,Potable Water,Reducer,Internal,2021-09-22,2026-09-05,50.0,640,11,0
+CML-090,0.07,7.0,Gas,Bend,Internal,2023-01-30,2028-10-13,57.1,1409,27,0
+CML-091,0.05,8.1,Fuel Gas,Reducer,Both,2021-08-30,2027-04-23,50.0,1235,20,0
+CML-092,0.15,11.1,Crude Oil,Weld,External,2024-07-20,2029-02-14,54.0,1698,13,0
+CML-093,0.11,9.3,Gas,Reducer,Both,2024-05-14,2030-01-07,57.3,1860,18,0
+CML-094,0.11,9.4,Process Water,Pipe,Both,2022-01-23,2027-09-18,58.2,1383,19,0
+CML-095,0.12,9.5,Refined Product,Reducer,External,2022-06-22,2028-02-15,54.2,1168,18,0
+CML-096,0.13,8.6,Potable Water,Pipe,Both,2023-07-13,2029-03-07,43.1,1188,24,0
+CML-097,0.07,6.5,Refined Product,Pipe,Both,2021-10-07,2027-04-13,50.0,1225,31,0
+CML-098,0.08,8.3,Condensate,Pipe,External,2023-10-12,2029-05-06,66.3,1614,21,0
+CML-099,0.14,8.0,Potable Water,Reducer,Both,2022-03-14,2028-00-08,35.7,1160,31,0
+CML-100,0.05,11.0,Fuel Gas,Reducer,Both,2024-01-05,2029-08-30,50.0,1855,8,1
+CML-101,0.03,6.3,Potable Water,Tee,Both,2023-09-04,2029-04-28,50.0,1606,29,1
+CML-102,0.12,10.2,Steam,Weld,Both,2024-02-01,2029-09-26,60.0,1757,13,0
+CML-103,0.08,8.9,Condensate,Nozzle,External,2023-09-08,2029-04-02,73.8,1610,18,0
+CML-104,0.14,9.7,Potable Water,Reducer,Internal,2024-08-15,2030-04-09,47.9,1617,19,0
+CML-105,0.08,8.6,Fuel Gas,Reducer,Both,2024-04-02,2029-11-25,70.0,1817,20,0
+CML-106,0.13,11.7,Crude Oil,Bend,Both,2023-07-29,2028-08-11,50.0,1345,7,0
+CML-107,0.14,7.0,Crude Oil,Bend,Both,2024-06-18,2029-01-12,28.6,1665,35,0
+CML-108,0.14,9.0,Crude Oil,Reducer,Both,2021-07-08,2026-06-21,42.9,564,24,0
+CML-109,0.08,9.3,Potable Water,Tee,Both,2023-09-21,2029-05-15,78.8,1623,16,0
+CML-110,0.13,7.7,Crude Oil,Reducer,Both,2021-07-01,2026-06-14,36.2,557,30,0
+CML-111,0.06,9.1,Refined Product,Reducer,External,2023-05-24,2029-01-16,50.0,1674,16,0
+CML-112,0.13,8.7,Gas,Reducer,External,2023-09-01,2029-04-25,43.8,1603,24,0
+CML-113,0.04,8.9,Condensate,Reducer,External,2023-10-22,2029-06-16,50.0,1654,14,1
+CML-114,0.07,9.5,Potable Water,Reducer,External,2023-03-28,2028-11-21,92.9,1448,14,0
+CML-115,0.12,8.2,Potable Water,Reducer,Internal,2023-03-22,2028-11-15,43.3,1442,25,0
+CML-116,0.13,9.0,Steam,Reducer,Both,2023-10-18,2029-06-12,46.2,1650,22,0
+CML-117,0.06,8.2,Refined Product,Reducer,Internal,2024-03-28,2030-00-21,86.7,1843,20,0
+CML-118,0.13,10.5,Process Water,Tee,External,2024-06-14,2029-01-08,57.7,1661,14,0
+CML-119,0.09,7.1,Refined Product,Weld,External,2024-02-04,2029-09-29,45.6,1760,28,0
+CML-120,0.13,8.9,Refined Product,Weld,Both,2024-02-17,2029-10-12,45.4,1773,23,0
+CML-121,0.11,6.5,Gas,Reducer,Both,2022-01-16,2027-09-11,31.8,1376,33,0
+CML-122,0.11,7.8,Potable Water,Pipe,Both,2024-05-26,2030-01-18,43.6,1871,25,0
+CML-123,0.14,8.8,Crude Oil,Reducer,Both,2024-11-03,2030-05-28,41.4,1666,24,0
+CML-124,0.13,8.7,Steam,Reducer,Both,2024-05-03,2029-12-26,43.8,1818,24,0
+CML-125,0.09,6.6,Potable Water,Tee,Both,2023-05-14,2029-01-06,40.0,1664,30,0
+CML-126,0.09,10.5,Condensate,Reducer,Both,2024-05-13,2030-01-05,83.3,1858,11,0
+CML-127,0.07,7.0,Potable Water,Reducer,Both,2023-07-28,2029-03-22,57.1,1203,26,0
+CML-128,0.09,6.8,Refined Product,Reducer,Both,2022-04-24,2028-00-18,42.2,1210,30,0
+CML-129,0.13,8.8,Potable Water,Pipe,Both,2023-02-21,2028-10-20,44.6,1415,23,0
+CML-130,0.12,6.4,Steam,Reducer,Both,2022-03-26,2027-11-20,28.3,1416,37,0
+CML-131,0.1,11.4,Condensate,Reducer,Both,2024-04-20,2030-00-13,50.0,1835,7,0
+CML-132,0.14,9.1,Crude Oil,Reducer,Both,2023-08-18,2028-09-01,43.6,1333,22,0
+CML-133,0.07,11.7,Gas,Nozzle,Both,2024-10-16,2030-05-30,50.0,1668,1,1
+CML-134,0.11,9.4,Fuel Gas,Weld,Both,2024-08-17,2030-04-11,58.2,1619,17,0
+CML-135,0.09,8.1,Condensate,Nozzle,Both,2023-11-15,2029-05-10,56.7,1618,23,0
+CML-136,0.15,11.0,Natural Gas,Reducer,Internal,2024-05-24,2030-01-16,53.3,1869,11,0
+CML-137,0.14,11.5,Steam,Reducer,Both,2024-11-05,2030-05-30,50.0,1668,9,0
+CML-138,0.11,9.9,Fuel Gas,Pipe,External,2024-04-28,2030-00-21,62.7,1843,15,0
+CML-139,0.06,7.5,Natural Gas,Reducer,Internal,2024-09-27,2030-05-21,75.0,1629,20,0
+CML-140,0.09,9.3,Condensate,Reducer,Both,2022-07-18,2028-03-12,70.0,1193,18,0
+CML-141,0.14,10.6,Process Water,Weld,Both,2023-04-25,2029-00-18,54.3,1540,16,0
+CML-142,0.05,8.1,Condensate,Reducer,Both,2024-03-25,2030-00-18,50.0,1840,19,0
+CML-143,0.11,6.9,Condensate,Reducer,Both,2023-08-01,2029-03-26,35.5,1207,31,0
+CML-144,0.04,11.5,Condensate,Reducer,External,2024-04-06,2029-11-30,50.0,1822,3,1
+CML-145,0.11,10.2,Fuel Gas,Reducer,Both,2022-09-06,2028-04-30,65.5,1243,13,0
+CML-146,0.09,7.2,Potable Water,Reducer,Internal,2023-06-16,2029-02-08,46.7,1161,27,0
+CML-147,0.14,8.9,Crude Oil,Bend,Both,2024-09-08,2030-05-02,42.1,1610,24,0
+CML-148,0.09,7.9,Refined Product,Reducer,Internal,2024-01-15,2029-09-09,54.4,1740,24,0
+CML-149,0.14,7.9,Refined Product,Reducer,Both,2021-09-07,2026-08-21,35.0,625,31,0
+CML-150,0.05,7.0,Potable Water,Reducer,External,2024-01-30,2029-09-24,50.0,1755,24,0
+CML-151,0.1,7.2,Refined Product,Reducer,Both,2024-08-07,2030-03-31,42.0,1713,28,0
+CML-152,0.13,10.6,Condensate,Reducer,Both,2021-12-26,2027-06-19,58.5,1292,12,0
+CML-153,0.14,10.7,Crude Oil,Reducer,Both,2022-08-22,2027-09-05,55.0,1341,14,0
+CML-154,0.06,9.2,Natural Gas,Reducer,Both,2024-08-28,2030-04-22,50.0,1630,13,0
+CML-155,0.13,6.3,Potable Water,Reducer,Internal,2023-02-22,2028-10-21,25.4,1416,39,0
+CML-156,0.12,9.9,Crude Oil,Reducer,Internal,2024-10-21,2030-06-04,57.5,1673,15,0
+CML-157,0.14,9.2,Crude Oil,Reducer,Internal,2024-10-04,2030-04-28,44.3,1606,22,0
+CML-158,0.05,9.7,Condensate,Reducer,Both,2023-09-24,2029-05-18,50.0,1626,10,1
+CML-159,0.12,6.9,Crude Oil,Reducer,Both,2024-01-07,2029-09-02,32.5,1733,33,0
+CML-160,0.13,8.6,Crude Oil,Reducer,Both,2024-06-05,2029-00-30,43.1,1652,24,0
+CML-161,0.13,6.6,Potable Water,Weld,Internal,2024-04-01,2029-11-24,27.7,1816,36,0
+CML-162,0.13,10.0,Process Water,Reducer,Both,2024-04-30,2030-00-23,53.8,1845,16,0
+CML-163,0.13,11.9,Natural Gas,Reducer,Internal,2024-09-15,2030-05-09,50.0,1617,7,0
+CML-164,0.29,7.0,Steam,Reducer,External,2022-06-12,2026-06-25,13.8,568,45,0
+CML-165,0.09,8.5,Condensate,Weld,Both,2023-10-14,2029-06-08,61.1,1646,21,0
+CML-166,0.08,6.0,Gas,Reducer,Both,2022-12-11,2028-08-04,37.5,1338,37,0
+CML-167,0.06,10.9,Condensate,Reducer,Both,2024-11-07,2030-05-31,50.0,1669,8,0
+CML-168,0.1,7.4,Refined Product,Reducer,Both,2024-10-02,2030-05-26,44.0,1664,27,0
+CML-169,0.12,7.9,Refined Product,Pipe,Both,2024-08-16,2030-04-10,40.8,1618,27,0
+CML-170,0.08,11.2,Natural Gas,Reducer,Both,2024-01-21,2029-09-15,50.0,1746,7,0
+CML-171,0.13,11.0,Crude Oil,Reducer,Both,2023-08-09,2028-08-22,50.0,1324,10,0
+CML-172,0.12,8.3,Crude Oil,Reducer,Internal,2021-12-17,2027-06-10,44.2,1283,25,0
+CML-173,0.13,10.1,Process Water,Reducer,Both,2021-12-25,2027-06-18,54.6,1291,15,0
+CML-174,0.08,9.5,Condensate,Reducer,Internal,2024-06-28,2030-02-21,81.3,1675,13,0
+CML-175,0.13,9.3,Fuel Gas,Reducer,Both,2023-06-14,2029-02-06,48.5,1159,20,0
+CML-176,0.14,6.4,Steam,Reducer,Both,2024-08-27,2030-04-21,24.3,1629,38,0
+CML-177,0.12,10.1,Gas,Pipe,Internal,2024-06-11,2029-12-05,59.2,1628,14,0
+CML-178,0.11,9.6,Refined Product,Reducer,Both,2024-05-04,2029-12-27,60.0,1819,17,0
+CML-179,0.14,10.4,Potable Water,Reducer,Internal,2024-07-09,2030-02-02,52.9,1686,17,0
+CML-180,0.08,8.8,Condensate,Reducer,Internal,2024-08-09,2030-04-03,72.5,1716,17,0
+CML-181,0.05,8.5,Refined Product,Reducer,Both,2023-12-16,2029-08-09,50.0,1713,17,0
+CML-182,0.13,8.5,Crude Oil,Weld,Both,2023-08-24,2029-04-18,42.3,1596,24,0
+CML-183,0.12,8.1,Steam,Reducer,Both,2024-03-05,2029-11-29,42.5,1821,26,0
+CML-184,0.13,8.9,Crude Oil,Reducer,Both,2024-08-31,2030-04-25,45.4,1634,23,0
+CML-185,0.12,8.9,Fuel Gas,Reducer,Both,2022-05-02,2028-00-26,49.2,1148,21,0
+CML-186,0.05,8.6,Gas,Reducer,Both,2024-03-20,2030-00-13,50.0,1835,16,0
+CML-187,0.05,11.2,Refined Product,Reducer,Both,2023-12-24,2029-08-17,50.0,1721,6,1
+CML-188,0.09,11.3,Fuel Gas,Reducer,Both,2024-05-20,2030-01-12,92.2,1865,7,0
+CML-189,0.06,9.8,Potable Water,Reducer,External,2024-06-01,2029-12-25,50.0,1652,11,0
+CML-190,0.13,9.7,Gas,Reducer,External,2024-03-02,2029-11-26,51.5,1818,17,0
+CML-191,0.14,9.0,Natural Gas,Reducer,Internal,2023-09-07,2029-04-01,42.9,1609,24,0
+CML-192,0.09,10.8,Potable Water,Weld,Internal,2023-07-08,2029-02-20,86.7,1174,11,0
+CML-193,0.09,6.6,Refined Product,Pipe,Both,2024-01-02,2029-08-27,40.0,1726,30,0
+CML-194,0.12,9.1,Fuel Gas,Reducer,Both,2023-04-28,2029-00-21,50.8,1543,21,0
+CML-195,0.1,8.4,Potable Water,Reducer,Both,2022-11-29,2028-07-22,54.0,1326,23,0
+CML-196,0.14,10.3,Steam,Reducer,Both,2023-11-02,2029-05-27,52.1,1635,18,0
+CML-197,0.05,9.6,Gas,Bend,External,2023-05-18,2029-01-09,50.0,1667,11,1
+CML-198,0.08,8.7,Natural Gas,Reducer,Both,2021-09-08,2026-08-22,71.3,626,19,0
+CML-199,0.12,10.6,Refined Product,Reducer,Both,2024-03-19,2030-00-12,63.3,1834,14,0
+CML-200,0.13,8.7,Potable Water,Reducer,Both,2024-01-19,2029-09-13,43.8,1744,23,0
