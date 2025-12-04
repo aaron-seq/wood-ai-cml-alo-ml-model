@@ -1,0 +1,6 @@
+id_number,average_corrosion_rate,thickness_mm,last_inspection_date,next_inspection_date,commodity,feature_type,cml_shape,elimination_flag
+CML-001,0.12,8.4,2021-01-15,2026-01-15,Crude Oil,Elbow,External,0
+CML-002,0.25,7.9,2020-06-10,2024-06-10,Potable Water,Straight,Internal,1
+CML-003,0.05,9.2,2022-03-01,2027-03-01,Refined Product,Reducer,External,0
+CML-004,0.4,6.8,2019-11-20,2023-11-20,Gas,Nozzle,Internal,1
+CML-005,0.18,7.5,2021-08-05,2025-08-05,Potable Water,Straight,External,0
