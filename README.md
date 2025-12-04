@@ -8,46 +8,46 @@
 
 Machine Learning-powered **Condition Monitoring Location (CML) Optimization System** - A comprehensive data-driven solution for streamlining CML selection, elimination, and lifecycle management using advanced ML algorithms and industry best practices.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements an end-to-end ML system for CML optimization, originally developed by Wood PLC. The system combines machine learning, forecasting, and expert decision tracking to provide intelligent recommendations for CML elimination and inspection scheduling.
 
-### ✨ Key Features
+### Key Features
 
 #### Core ML & Analytics
-- ✅ **Advanced ML Pipeline**: Random Forest classifier with hyperparameter tuning, cross-validation, and feature engineering
-- ✅ **Remaining Life Forecasting**: Time-series forecasting for remaining CML life and inspection scheduling
-- ✅ **Risk Classification**: Automated risk level assessment (CRITICAL, HIGH, MEDIUM, LOW)
-- ✅ **Feature Engineering**: 20+ engineered features including corrosion-thickness ratios and risk interactions
-- ✅ **Model Persistence**: Trained models saved with metadata and performance metrics
+-   **Advanced ML Pipeline**: Random Forest classifier with hyperparameter tuning, cross-validation, and feature engineering
+-   **Remaining Life Forecasting**: Time-series forecasting for remaining CML life and inspection scheduling
+-   **Risk Classification**: Automated risk level assessment (CRITICAL, HIGH, MEDIUM, LOW)
+-   **Feature Engineering**: 20+ engineered features including corrosion-thickness ratios and risk interactions
+-   **Model Persistence**: Trained models saved with metadata and performance metrics
 
 #### API & Integration
-- ✅ **FastAPI Backend**: High-performance RESTful API with OpenAPI documentation
-- ✅ **Comprehensive Endpoints**: Upload, score, forecast, SME overrides, and reporting
-- ✅ **Pydantic Validation**: Strict data validation with schemas for all inputs/outputs
-- ✅ **Batch Processing**: Support for bulk CML data processing and scoring
-- ✅ **File Format Support**: CSV and Excel (.xlsx) file uploads
+-   **FastAPI Backend**: High-performance RESTful API with OpenAPI documentation
+-   **Comprehensive Endpoints**: Upload, score, forecast, SME overrides, and reporting
+-   **Pydantic Validation**: Strict data validation with schemas for all inputs/outputs
+-   **Batch Processing**: Support for bulk CML data processing and scoring
+-   **File Format Support**: CSV and Excel (.xlsx) file uploads
 
 #### Dashboard & Visualization
-- ✅ **Streamlit Dashboard**: Interactive web dashboard for data exploration and analysis
-- ✅ **Plotly Charts**: Dynamic visualizations for commodity distribution, risk analysis, and forecasts
-- ✅ **Real-time Statistics**: Live metrics and performance indicators
-- ✅ **Data Download**: Export predictions, forecasts, and reports as CSV
+-   **Streamlit Dashboard**: Interactive web dashboard for data exploration and analysis
+-   **Plotly Charts**: Dynamic visualizations for commodity distribution, risk analysis, and forecasts
+-   **Real-time Statistics**: Live metrics and performance indicators
+-   **Data Download**: Export predictions, forecasts, and reports as CSV
 
 #### Expert Systems
-- ✅ **SME Override System**: Track Subject Matter Expert manual decision overrides
-- ✅ **Override Analytics**: Statistics on SME decisions and ML agreement rates
-- ✅ **Decision Tracking**: Complete audit trail of all manual interventions
-- ✅ **Reason Documentation**: Mandatory explanations for all override decisions
+-   **SME Override System**: Track Subject Matter Expert manual decision overrides
+-   **Override Analytics**: Statistics on SME decisions and ML agreement rates
+-   **Decision Tracking**: Complete audit trail of all manual interventions
+-   **Reason Documentation**: Mandatory explanations for all override decisions
 
 #### Production Ready
-- ✅ **Docker Support**: Full containerization with docker-compose
-- ✅ **Testing Suite**: Comprehensive pytest test coverage for API, ML, and utilities
-- ✅ **Documentation**: Complete API docs, usage guides, and deployment instructions
-- ✅ **Configuration Management**: Environment-based settings with .env support
-- ✅ **Logging & Monitoring**: Structured logging and health check endpoints
+-   **Docker Support**: Full containerization with docker-compose
+-   **Testing Suite**: Comprehensive pytest test coverage for API, ML, and utilities
+-   **Documentation**: Complete API docs, usage guides, and deployment instructions
+-   **Configuration Management**: Environment-based settings with .env support
+-   **Logging & Monitoring**: Structured logging and health check endpoints
 
-### 📊 Dataset
+### Dataset
 
 **Comprehensive 200-Row Synthetic Dataset** with realistic patterns:
 - 200 unique CMLs (CML-001 to CML-200)
@@ -59,7 +59,7 @@ This project implements an end-to-end ML system for CML optimization, originally
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Docker (Recommended)
 
@@ -100,7 +100,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 wood-ai-cml-alo-ml-model/
@@ -146,7 +146,7 @@ wood-ai-cml-alo-ml-model/
 
 ---
 
-## 🔧 Usage
+## Usage
 
 ### 1. Training the Model
 
@@ -226,11 +226,11 @@ streamlit run streamlit_app.py
 Access at: http://localhost:8501
 
 **Dashboard Features:**
-- 📊 **Overview**: Dataset statistics and visualizations
-- 📤 **Upload & Score**: Upload CML data for ML predictions
-- 📈 **Forecasting**: Generate remaining life forecasts and inspection schedules
-- 👨‍💼 **SME Overrides**: Manage expert manual overrides
-- 📑 **Reports**: Comprehensive analysis and downloadable reports
+-  **Overview**: Dataset statistics and visualizations
+-  **Upload & Score**: Upload CML data for ML predictions
+-  **Forecasting**: Generate remaining life forecasts and inspection schedules
+-  **SME Overrides**: Manage expert manual overrides
+-  **Reports**: Comprehensive analysis and downloadable reports
 
 ### 4. Python SDK Usage
 
@@ -263,7 +263,7 @@ print(f"Total overrides: {stats['total_overrides']}")
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Run all tests
@@ -287,7 +287,7 @@ pytest -m unit
 
 ---
 
-## 📈 Model Performance
+##  Model Performance
 
 ### Classification Metrics (200-row dataset)
 
@@ -309,7 +309,7 @@ pytest -m unit
 
 ---
 
-## 🎯 Business Value
+##   Business Value
 
 ### ROI Calculation
 - **Investment**: $63K
@@ -325,7 +325,7 @@ pytest -m unit
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### Backend & ML
 - **Python 3.9+**: Core programming language
@@ -351,7 +351,7 @@ pytest -m unit
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 Comprehensive documentation available in `/docs` directory:
 
@@ -360,9 +360,9 @@ Comprehensive documentation available in `/docs` directory:
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
-### ✅ Phase 1 - Core ML System (Completed)
+###   Phase 1 - Core ML System (Completed)
 - [x] 200-row comprehensive synthetic dataset
 - [x] Enhanced ML training with hyperparameter tuning
 - [x] Forecasting module for remaining life
@@ -374,14 +374,14 @@ Comprehensive documentation available in `/docs` directory:
 - [x] Docker deployment
 - [x] Complete documentation
 
-### 🚧 Phase 2 - Advanced Features (In Progress)
+###  Phase 2 - Advanced Features (In Progress)
 - [ ] PDF report generation with charts
 - [ ] Time-series analysis with historical data
 - [ ] Advanced anomaly detection
 - [ ] Multi-model ensemble predictions
 - [ ] Real-time monitoring dashboard
 
-### 📋 Phase 3 - Enterprise Integration (Planned)
+###  Phase 3 - Enterprise Integration (Planned)
 - [ ] Microsoft Azure cloud deployment
 - [ ] PostgreSQL database integration
 - [ ] User authentication and authorization
@@ -389,7 +389,7 @@ Comprehensive documentation available in `/docs` directory:
 - [ ] Automated CI/CD pipeline
 - [ ] Integration with existing Wood systems
 
-### 🔮 Phase 4 - AI Enhancement (Future)
+###  Phase 4 - AI Enhancement (Future)
 - [ ] Deep learning models for complex patterns
 - [ ] NLP for SME reason analysis
 - [ ] Automated report generation with GPT
@@ -398,7 +398,7 @@ Comprehensive documentation available in `/docs` directory:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions welcome! Please follow these steps:
 
@@ -416,13 +416,13 @@ Contributions welcome! Please follow these steps:
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-## 👥 Team
+##  Team
 
 **Original Project (Wood PLC):**
 - **Project Owner**: Jeffrey Anokye
@@ -436,7 +436,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## 📧 Contact & Support
+##  Contact & Support
 
 - **Developer**: Aaron Sequeira
 - **Email**: aaron@smarter.codes.ai
@@ -445,7 +445,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Wood PLC for the original project concept and funding
 - Subject Matter Experts who provided domain knowledge
@@ -454,7 +454,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## 📊 Project Stats
+##  Project Stats
 
 ![GitHub Stars](https://img.shields.io/github/stars/aaron-seq/wood-ai-cml-alo-ml-model?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/aaron-seq/wood-ai-cml-alo-ml-model?style=social)
@@ -463,5 +463,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Made with ❤️ by Aaron Sequeira @ Smarter.Codes.AI**  
+**Made with ❤️ by Aaron Sequeira**  
 **Original Concept by Wood PLC Engineering Team**
