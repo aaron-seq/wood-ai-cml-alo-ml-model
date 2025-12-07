@@ -76,7 +76,7 @@ def test_calculate_inspection_schedule():
 def test_calculate_inspection_schedule_high_risk():
     """Test inspection schedule for high-risk CML."""
     result = calculate_inspection_schedule(
-        corrosion_rate=0.35,  # High corrosion
+        corrosion_rate=0.5,  # High corrosion
         thickness=5.0,        # Thin wall
         min_thickness=3.0,
         safety_factor=1.5

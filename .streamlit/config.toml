@@ -1,0 +1,11 @@
+[theme]
+primaryColor = "#00AEEF"  # Wood Blue (approximated for visibility on dark)
+backgroundColor = "#000000" # Deep Black for high contrast
+secondaryBackgroundColor = "#1E1E1E" # Dark Gray for sidebar/cards
+textColor = "#FFFFFF" # White text
+font = "sans serif"
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
