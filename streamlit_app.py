@@ -39,7 +39,7 @@ LOGO_PATH = Path("Wood-logo-WHITE-45mm.png")
 # Page configuration
 st.set_page_config(
     page_title="Wood Engineering - CML Analysis",
-    page_icon="🔧",
+    page_icon=None,
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -129,8 +129,8 @@ if page == "Overview":
     st.markdown("---")
 
     if st.session_state['data'] is None:
-        st.info("👋 Welcome to the Wood Engineering CML Analysis Tool.")
-        st.warning("⚠️ No data loaded. Please go to the **Upload & Analyze** page to begin.")
+        st.info("Welcome to the Wood Engineering CML Analysis Tool.")
+        st.warning("No data loaded. Please go to the **Upload & Analyze** page to begin.")
     else:
         df = st.session_state['data']
         st.subheader("Current Dataset Analytics")
@@ -175,7 +175,7 @@ elif page == "Upload & Analyze":
             validation = validate_cml_dataframe(df)
             if validation["valid"]:
                 st.session_state['data'] = df
-                st.success(f"✅ Loaded {len(df)} records successfully.")
+                st.success(f"Loaded {len(df)} records successfully.")
                 
                 if st.button("Run ML Analysis", type="primary"):
                     with st.spinner("Analyzing CML patterns..."):
@@ -183,7 +183,7 @@ elif page == "Upload & Analyze":
                             from api_client import score_cml_data, check_api_health
                             
                             if not check_api_health():
-                                st.error("⚠️ API server is not responding.")
+                                st.error("API server is not responding.")
                             else:
                                 # Reset file pointer
                                 uploaded_file.seek(0)
@@ -222,7 +222,7 @@ elif page == "Upload & Analyze":
         # Download button
         csv = res_df.to_csv(index=False)
         st.download_button(
-            label="📥 Download Detailed Report",
+            label="Download Detailed Report",
             data=csv,
             file_name="wood_cml_optimization_results.csv",
             mime="text/csv",
@@ -233,7 +233,7 @@ elif page == "How It Works":
     st.title("Machine Learning Model Explained")
     
     st.markdown("""
-    ### 🧠 The Intelligence Behind the Decision
+    ### The Intelligence Behind the Decision
     
     This application utilizes an advanced **Random Forest Ensemble** model to evaluate reliability. Unlike simple threshold-based rules, this model considers non-linear interactions between multiple variables to mimic the decision-making process of a senior corrosion engineer.
 
