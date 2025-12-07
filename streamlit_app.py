@@ -75,7 +75,7 @@ else:
 st.sidebar.header("CML Analysis Platform")
 page = st.sidebar.radio(
     "Navigation",
-    ["Overview", "Upload & Analyze", "Forecasting", "SME Overrides", "Reports", "How It Works"],
+    ["Overview", "Upload & Analyze", "Forecasting", "SME Overrides", "Reports", "How It Works", "About Application"],
 )
 
 # --- Session State Management ---
@@ -351,6 +351,73 @@ elif page == "Reports":
             template="plotly_dark"
         )
         st.plotly_chart(fig, use_container_width=True)
+
+elif page == "About Application":
+    st.title("About Application")
+    
+    st.markdown("""
+    ### User Guide & System Documentation
+    
+    This application is a specialized decision support system designed for **Wood Engineering** integrity management teams. It integrates advanced machine learning with traditional engineering principles to optimize Condition Monitoring Location (CML) inspection programs.
+    
+    ---
+    
+    ### 1. Upload & Analyze
+    **Component**: Data Ingestion Engine & ML Scoring
+    
+    *   **What it does**: Accepts raw CML data (CSV/Excel) and applies the Random Forest Ensemble model to evaluate the risk and necessity of each monitoring point.
+    *   **Why it exists**: Manual review of thousands of CMLs is time-consuming and prone to inconsistency. This component automates the first pass of screening, identifying "Low Value" CMLs that can be safely eliminated.
+    *   **How to use**: 
+        1.  Prepare your data file (ensure required columns like `thickness_mm`, `corrosion_rate` are present).
+        2.  Navigate to **Upload & Analyze**.
+        3.  Drag and drop your file.
+        4.  Review the validation check (green checkmark).
+        5.  Click **Run ML Analysis**.
+        6.  View the "Optimization Recommendations" dashboard and download the results.
+        
+    ### 2. Lifecycle Forecasting
+    **Component**: Remaining Life Calculator
+    
+    *   **What it does**: Projects the future state of an asset based on current thickness and corrosion rates, calculating the exact date when minimum safe thickness will be breached.
+    *   **Why it exists**: To move from reactive to predictive maintenance. Knowing *when* an asset will become unsafe allows for optimized inspection intervals (e.g., extending inspection from 3 years to 5 years if remaining life is high).
+    *   **How to use**:
+        1.  Ensure data is loaded in the "Upload" section.
+        2.  Go to **Forecasting**.
+        3.  Adjust parameters:
+            *   **Min Thickness**: The absolute safety floor (default 3.0 mm).
+            *   **Safety Factor**: Buffer multiplier (default 1.5x).
+        4.  Click **Generate Forecasts** to see the `Next Inspection Date`.
+        
+    ### 3. Expert Override Management
+    **Component**: Human-in-the-loop Auditing
+    
+    *   **What it does**: A dedicated interface for engineers to formally reject the AI's recommendation.
+    *   **Why it exists**: **Safety First.** The AI is a tool, not the final authority. There are nuanced field conditions (e.g., "vibro-acoustic fatigue risk") that the data might not capture. This component ensures that human expertise always supersedes the model, and creates an audit trail for compliance.
+    *   **How to use**:
+        1.  Identify a CML where you disagree with the model (e.g., Model says "ELIMINATE" but you know it's a high-consequence area).
+        2.  Go to **SME Overrides**.
+        3.  Enter the `CML ID`.
+        4.  Select your decision (`KEEP`).
+        5.  Provide the **Reason** (mandatory).
+        6.  Submit to save to the audit log.
+        
+    ### 4. Comprehensive Reports
+    **Component**: Executive Dashboard
+    
+    *   **What it does**: Aggregates the health status of the entire uploaded asset portfolio.
+    *   **Why it exists**: For high-level decision making. Managers need to know the overall health (e.g., "30% of our carbon steel pipes are nearing end-of-life") rather than individual data points.
+    *   **How to use**: Simply navigate to **Reports** after loading data to see interactive charts on Commodity Distribution and Risk profiles.
+    
+    ### 5. How It Works
+    **Component**: White-Box Model Explanation
+    
+    *   **What it does**: Reveals the inner workings of the AI.
+    *   **Why it exists**: To build trust. "Black box" AI is dangerous in engineering. By showing exactly which factors (Corrosion Rate, Thickness, etc.) drove the decision, engineers can validate if the AI's logic aligns with physical reality.
+    
+    ---
+    
+    **Support**: For technical issues or model retraining requests, please contact the Wood Engineering Digital Solutions team.
+    """)
 
 # Footer
 st.sidebar.markdown("---")
