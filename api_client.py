@@ -2,7 +2,7 @@ import requests
 from typing import Optional, Dict, Any
 import streamlit as st
 
-API_BASE_URL = "http://localhost:8000"
+API_BASE_URL = "http://localhost:8002"
 
 
 def check_api_health() -> bool:
@@ -24,12 +24,26 @@ def score_cml_data(uploaded_file) -> Optional[Dict[str, Any]]:
         API response as dict or None on error
     """
     try:
-        files = {
-            "file": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)
-        }
-        response = requests.post(
-            f"{API_BASE_URL}/score-cml-data", files=files, timeout=30
+        # Robust MIME type handling
+        mime_type = (
+            uploaded_file.type if uploaded_file.type else "application/octet-stream"
         )
+
+        files = {"file": (uploaded_file.name, uploaded_file.getvalue(), mime_type)}
+
+        # Log upload attempt
+        print(
+            f"Uploading {uploaded_file.name} ({len(uploaded_file.getvalue())} bytes, type={mime_type})"
+        )
+
+        response = requests.post(
+            f"{API_BASE_URL}/score-cml-data", files=files, timeout=60
+        )
+
+        if response.status_code == 422:
+            st.error(f"Validation Error: {response.text}")
+            return None
+
         response.raise_for_status()
         return response.json()
     except requests.exceptions.ConnectionError:
@@ -40,6 +54,14 @@ def score_cml_data(uploaded_file) -> Optional[Dict[str, Any]]:
     except requests.exceptions.Timeout:
         st.error("API request timed out. Please try again.")
         return None
+    except requests.exceptions.HTTPError as e:
+        st.error(f"API Error: {e}")
+        try:
+            # Try to print more detail if available
+            st.code(response.text)
+        except:
+            pass
+        return None
     except Exception as e:
-        st.error(f"API Error: {str(e)}")
+        st.error(f"Unexpected Error: {str(e)}")
         return None
