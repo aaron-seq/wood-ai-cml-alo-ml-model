@@ -78,6 +78,53 @@ async def health():
     }
 
 
+@app.get("/model-info")
+async def model_info():
+    """Return information about the loaded ML model."""
+    if model is None:
+        return {
+            "model_loaded": False,
+            "message": "No model loaded",
+            "available_models": [
+                "random_forest",
+                "gradient_boosting",
+                "xgboost",
+            ],
+        }
+
+    model_type = type(model).__name__
+    classifier_name = "Unknown"
+    if hasattr(model, "named_steps") and "classifier" in model.named_steps:
+        classifier_name = type(model.named_steps["classifier"]).__name__
+
+    # Try to load metadata if available
+    metadata_files = list((BASE_DIR / "models").glob("model_metadata_*.json"))
+    metrics = {}
+    if metadata_files:
+        latest_metadata = sorted(metadata_files)[-1]
+        try:
+            import json
+
+            with open(latest_metadata) as f:
+                metadata = json.load(f)
+                metrics = metadata.get("metrics", {})
+        except Exception:
+            pass
+
+    return {
+        "model_loaded": True,
+        "model_type": model_type,
+        "classifier": classifier_name,
+        "model_path": str(MODEL_PATH),
+        "metrics": metrics,
+        "available_models": [
+            "random_forest",
+            "gradient_boosting",
+            "xgboost",
+        ],
+    }
+
+
 @app.post("/upload-cml-data", response_model=UploadResponse)
 async def upload_cml_data(file: UploadFile = File(...)):
     try:
